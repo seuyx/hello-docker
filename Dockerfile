@@ -1,2 +1,4 @@
-FROM busybox:latest
-CMD echo Hello World!
+FROM busybox
+ARG TARGETPLATFORM
+RUN echo "Building for $TARGETPLATFORM"
+CMD echo "Hello World from $(arch)!"
